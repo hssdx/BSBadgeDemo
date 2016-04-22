@@ -13,6 +13,9 @@
 		980A4CA61CCA04DF004EA464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 980A4CA41CCA04DF004EA464 /* Main.storyboard */; };
 		980A4CA81CCA04DF004EA464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 980A4CA71CCA04DF004EA464 /* Assets.xcassets */; };
 		980A4CAB1CCA04DF004EA464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 980A4CA91CCA04DF004EA464 /* LaunchScreen.storyboard */; };
+		980A4CB71CCA0521004EA464 /* BSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 980A4CB41CCA0521004EA464 /* BSBadgeView.m */; };
+		980A4CB81CCA0521004EA464 /* UIView+BSBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 980A4CB61CCA0521004EA464 /* UIView+BSBadge.m */; };
+		980A4CBB1CCA0F4B004EA464 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 980A4CBA1CCA0F4B004EA464 /* TabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		980A4CA71CCA04DF004EA464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		980A4CAA1CCA04DF004EA464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		980A4CAC1CCA04DF004EA464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		980A4CB31CCA0521004EA464 /* BSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBadgeView.h; sourceTree = "<group>"; };
+		980A4CB41CCA0521004EA464 /* BSBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBadgeView.m; sourceTree = "<group>"; };
+		980A4CB51CCA0521004EA464 /* UIView+BSBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSBadge.h"; sourceTree = "<group>"; };
+		980A4CB61CCA0521004EA464 /* UIView+BSBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSBadge.m"; sourceTree = "<group>"; };
+		980A4CB91CCA0F4B004EA464 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		980A4CBA1CCA0F4B004EA464 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,7 @@
 		980A4C8F1CCA04DF004EA464 = {
 			isa = PBXGroup;
 			children = (
+				980A4CB21CCA0521004EA464 /* BSBadge */,
 				980A4C9A1CCA04DF004EA464 /* BSBadgeDemo */,
 				980A4C991CCA04DF004EA464 /* Products */,
 			);
@@ -67,6 +77,8 @@
 				980A4CA91CCA04DF004EA464 /* LaunchScreen.storyboard */,
 				980A4CAC1CCA04DF004EA464 /* Info.plist */,
 				980A4C9B1CCA04DF004EA464 /* Supporting Files */,
+				980A4CB91CCA0F4B004EA464 /* TabBarViewController.h */,
+				980A4CBA1CCA0F4B004EA464 /* TabBarViewController.m */,
 			);
 			path = BSBadgeDemo;
 			sourceTree = "<group>";
@@ -77,6 +89,17 @@
 				980A4C9C1CCA04DF004EA464 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		980A4CB21CCA0521004EA464 /* BSBadge */ = {
+			isa = PBXGroup;
+			children = (
+				980A4CB31CCA0521004EA464 /* BSBadgeView.h */,
+				980A4CB41CCA0521004EA464 /* BSBadgeView.m */,
+				980A4CB51CCA0521004EA464 /* UIView+BSBadge.h */,
+				980A4CB61CCA0521004EA464 /* UIView+BSBadge.m */,
+			);
+			path = BSBadge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +173,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				980A4CA31CCA04DF004EA464 /* ViewController.m in Sources */,
+				980A4CB81CCA0521004EA464 /* UIView+BSBadge.m in Sources */,
 				980A4CA01CCA04DF004EA464 /* AppDelegate.m in Sources */,
 				980A4C9D1CCA04DF004EA464 /* main.m in Sources */,
+				980A4CBB1CCA0F4B004EA464 /* TabBarViewController.m in Sources */,
+				980A4CB71CCA0521004EA464 /* BSBadgeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BSBadgeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeachSon.com.BSBadgeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -277,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BSBadgeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BeachSon.com.BSBadgeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
