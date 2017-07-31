@@ -3,7 +3,7 @@
 //  Lighting
 //
 //  Created by Xiongxunquan on 11/27/15.
-//  Copyright © 2015 Kingsoft. All rights reserved.
+//  Copyright © 2015 hssdx. All rights reserved.
 //
 
 #import "BSBadgeView.h"
