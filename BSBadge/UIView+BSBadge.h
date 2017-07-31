@@ -6,11 +6,13 @@
 //  Copyright © 2015 Kingsoft. All rights reserved.
 //
 
-#import "BSBadgeView.h"
+#import <UIKit/UIKit.h>
+
+@class BSBadgeView;
 
 @interface UIView (BSBadge)
 - (BSBadgeView *)badgeView;
 - (void)setBadgeValue:(NSString *)badgeValue;
 - (void)dismissBadge;
-- (void)addRemoveBadgeTarget:(id)target action:(SEL)action;
+- (void)setRemoveBadgeBlock:(void(^)(BSBadgeView *))block;
 @end

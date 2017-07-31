@@ -47,7 +47,11 @@ static const char CustomBubbleBadgeView = '\0';
 }
 
 - (void)setBadgeValue:(NSString *)badgeValue {
-    [self setBadgeValue:badgeValue offset:CGPointMake(0, -6) scale:20 gestureInView:self.superview needGesture:YES];
+    if (badgeValue.length == 0) {
+        [self setBadgeValue:badgeValue offset:CGPointMake(-4, -2) scale:6 gestureInView:self.superview needGesture:NO];
+    } else {
+        [self setBadgeValue:badgeValue offset:CGPointMake(-2, -8) scale:13 gestureInView:self.superview needGesture:YES];
+    }
 }
 
 - (void)setBadgeValue:(NSString *)badgeValue
@@ -70,9 +74,8 @@ static const char CustomBubbleBadgeView = '\0';
     [self setBadgeView:nil];
 }
 
-- (void)addRemoveBadgeTarget:(id)target action:(SEL)action {
-    self.badgeView.target = target;
-    self.badgeView.action = action;
+- (void)setRemoveBadgeBlock:(void(^)(BSBadgeView *))block {
+    self.badgeView.didDismissBlock = block;
 }
 
 @end

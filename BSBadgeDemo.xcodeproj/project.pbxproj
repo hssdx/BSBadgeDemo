@@ -16,6 +16,7 @@
 		980A4CB71CCA0521004EA464 /* BSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 980A4CB41CCA0521004EA464 /* BSBadgeView.m */; };
 		980A4CB81CCA0521004EA464 /* UIView+BSBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 980A4CB61CCA0521004EA464 /* UIView+BSBadge.m */; };
 		980A4CBB1CCA0F4B004EA464 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 980A4CBA1CCA0F4B004EA464 /* TabBarViewController.m */; };
+		98DEC6931F2EF5D200580FEB /* UITabBarController+BSBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 98DEC6921F2EF5D200580FEB /* UITabBarController+BSBadge.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		980A4CB61CCA0521004EA464 /* UIView+BSBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSBadge.m"; sourceTree = "<group>"; };
 		980A4CB91CCA0F4B004EA464 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		980A4CBA1CCA0F4B004EA464 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		98DEC6911F2EF5D200580FEB /* UITabBarController+BSBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBarController+BSBadge.h"; sourceTree = "<group>"; };
+		98DEC6921F2EF5D200580FEB /* UITabBarController+BSBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+BSBadge.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 		980A4CB21CCA0521004EA464 /* BSBadge */ = {
 			isa = PBXGroup;
 			children = (
+				98DEC6911F2EF5D200580FEB /* UITabBarController+BSBadge.h */,
+				98DEC6921F2EF5D200580FEB /* UITabBarController+BSBadge.m */,
 				980A4CB31CCA0521004EA464 /* BSBadgeView.h */,
 				980A4CB41CCA0521004EA464 /* BSBadgeView.m */,
 				980A4CB51CCA0521004EA464 /* UIView+BSBadge.h */,
@@ -133,6 +138,7 @@
 				TargetAttributes = {
 					980A4C971CCA04DF004EA464 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2KLE3D9WR3;
 					};
 				};
 			};
@@ -177,6 +183,7 @@
 				980A4CA01CCA04DF004EA464 /* AppDelegate.m in Sources */,
 				980A4C9D1CCA04DF004EA464 /* main.m in Sources */,
 				980A4CBB1CCA0F4B004EA464 /* TabBarViewController.m in Sources */,
+				98DEC6931F2EF5D200580FEB /* UITabBarController+BSBadge.m in Sources */,
 				980A4CB71CCA0521004EA464 /* BSBadgeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +298,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2KLE3D9WR3;
 				INFOPLIST_FILE = BSBadgeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -303,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2KLE3D9WR3;
 				INFOPLIST_FILE = BSBadgeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -330,6 +339,7 @@
 				980A4CB11CCA04DF004EA464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

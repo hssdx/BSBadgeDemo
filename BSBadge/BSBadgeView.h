@@ -10,8 +10,7 @@
 
 @interface BSBadgeView : UIView
 @property (assign, nonatomic) CGFloat scale;
-@property (weak, nonatomic) id target;
-@property (assign, nonatomic) SEL action;
+@property (copy, nonatomic) void (^didDismissBlock)(BSBadgeView *view);
 
 + (instancetype)badgeViewWithValue:(NSString *)value;
 - (CGFloat)badgeLength;

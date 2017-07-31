@@ -49,17 +49,15 @@
 }
 
 + (instancetype)badgeViewWithValue:(NSString *)value {
-    BSBadgeView *instance = [[BSBadgeView alloc]initWithValue:value];
+    BSBadgeView *instance = [[BSBadgeView alloc] initWithValue:value];
     return instance;
 }
 
 - (void)removeBadge {
-    if (!self.target || !self.action) {
+    if (!self.didDismissBlock) {
         return;
     }
-    IMP imp = [self.target methodForSelector:self.action];
-    void (*func)(id, SEL, id) = (void *)imp;
-    func(self.target, self.action, self);
+    self.didDismissBlock(self);
 }
 
 - (void)loadProperty {
@@ -69,7 +67,25 @@
 
 - (void)setScale:(CGFloat)scale {
     _scale = scale;
-    _badgeLabel.layer.cornerRadius = [self badgeLength] * 0.5;
+    CGFloat fontSize = MAX(8, scale);
+    fontSize = MIN(18, scale);
+    _badgeLabel.font = [UIFont systemFontOfSize:fontSize];
+    [self updateBadgeFrame];
+}
+
+- (void)updateBadgeFrame {
+    [_badgeLabel sizeToFit];
+    CGRect frame = _badgeLabel.frame;
+    CGFloat width = MAX(frame.size.width + 8, frame.size.height);
+    CGSize size = CGSizeMake(width, frame.size.height);
+    [self addSubview:_badgeLabel];
+    _badgeLabel.layer.masksToBounds = YES;
+    [_badgeLabel setBackgroundColor:[UIColor redColor]];
+    frame.size = size;
+    _badgeLabel.frame = frame;
+    _badgeLabel.layer.cornerRadius = frame.size.height * 0.5 + 0.5;
+    [_badgeLabel setTextColor:[UIColor whiteColor]];
+    [_badgeLabel setTextAlignment:NSTextAlignmentCenter];
 }
 
 - (void)loadBadgeLabel:(NSString *)value {
@@ -78,17 +94,7 @@
     }
     _badgeLabel = [UILabel new];
     _badgeLabel.text = value;
-    [_badgeLabel sizeToFit];
-    CGRect frame = _badgeLabel.frame;
-    CGSize size = CGSizeMake(frame.size.width+8, frame.size.height);
-    [self addSubview:_badgeLabel];
-    _badgeLabel.layer.masksToBounds = YES;
-    _badgeLabel.layer.cornerRadius = [self badgeLength] * 0.5;
-    [_badgeLabel setBackgroundColor:[UIColor redColor]];
-    frame.size = size;
-    _badgeLabel.frame = frame;
-    [_badgeLabel setTextColor:[UIColor whiteColor]];
-    [_badgeLabel setTextAlignment:NSTextAlignmentCenter];
+    [self updateBadgeFrame];
 }
 
 - (instancetype)initWithValue:(NSString *)value {
