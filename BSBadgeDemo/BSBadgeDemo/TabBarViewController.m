@@ -17,9 +17,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIUserNotificationType types = [UIApplication sharedApplication].currentUserNotificationSettings.types;
     // Do any additional setup after loading the view.
     [self bs_setBadge:@"10" remveBadgeBlock:^(BSBadgeView *badgeValue) {
         NSLog(@"已移除气泡");
+        if (types != UIUserNotificationTypeNone) {
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+        }
     } atIndex:0];
 }
 
