@@ -7,7 +7,6 @@
 //
 
 #import "BSBadgeView.h"
-#import "AppDelegate.h"
 #import "UIView+BSBadge.h"
 
 @interface BSBadgeView() <UIGestureRecognizerDelegate>
