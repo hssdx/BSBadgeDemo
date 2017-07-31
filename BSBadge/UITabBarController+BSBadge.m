@@ -11,6 +11,11 @@
 
 static const NSInteger kBadgeViewTag = 93728;
 
+
+@implementation _UITabBarController_BADGE
+@end
+
+
 @implementation UITabBarController (BSBadge)
 
 - (UIView *)bs_barItemViewAtIndex:(NSInteger)index {

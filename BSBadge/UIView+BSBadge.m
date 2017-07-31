@@ -13,6 +13,10 @@
 #pragma mark - kvc
 static const char CustomBubbleBadgeView = '\0';
 
+
+@implementation _UIView_BADGE
+@end
+
 @implementation UIView (BSBadge)
 
 - (void)setBadgeView:(BSBadgeView *)badgeView offset:(CGPoint)offset scale:(CGFloat)scale {

@@ -10,6 +10,11 @@
 
 @class BSBadgeView;
 
+
+@interface _UIView_BADGE : NSObject
+@end
+
+
 @interface UIView (BSBadge)
 - (BSBadgeView *)badgeView;
 - (void)setBadgeValue:(NSString *)badgeValue;
