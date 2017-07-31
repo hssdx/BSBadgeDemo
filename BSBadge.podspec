@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "BSBadge"
-  s.version      = "1.2"
+  s.version      = "1.3"
   s.summary      = "A can drag red-bubble control."
   s.description  = <<-DESC
                       BSBadge is a can drag red-bubble control.
                    DESC
 
   s.homepage     = "https://github.com/hssdx/BSBadgeDemo"
-  s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "hssdx" => "hssdx@qq.com" }
   s.platform     = :ios, '8.0'
   s.source       = { :git => "https://github.com/hssdx/BSBadgeDemo.git", :tag => s.version }
