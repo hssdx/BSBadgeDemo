@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BSBadge"
-  s.version      = "1.1"
+  s.version      = "1.2"
   s.summary      = "A can drag red-bubble control."
   s.description  = <<-DESC
                       BSBadge is a can drag red-bubble control.
@@ -20,15 +20,6 @@ Pod::Spec.new do |s|
 
   s.library   = "c++"
   s.libraries = "iconv", "xml2"
-
-  # s.public_header_files = "BSBadge.h", "BSBadge/*.h"
-
-  # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
-
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
