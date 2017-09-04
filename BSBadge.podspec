@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "BSBadge"
-  s.version      = "1.3"
+  s.version      = "1.4"
   s.summary      = "A can drag red-bubble control."
   s.description  = <<-DESC
                       BSBadge is a can drag red-bubble control.
