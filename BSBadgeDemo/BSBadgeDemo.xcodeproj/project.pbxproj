@@ -17,6 +17,7 @@
 		986E14E81F2EFA6C00AFA8D1 /* BSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 986E14E31F2EFA6C00AFA8D1 /* BSBadgeView.m */; };
 		986E14E91F2EFA6C00AFA8D1 /* UITabBarController+BSBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 986E14E51F2EFA6C00AFA8D1 /* UITabBarController+BSBadge.m */; };
 		986E14EA1F2EFA6C00AFA8D1 /* UIView+BSBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 986E14E71F2EFA6C00AFA8D1 /* UIView+BSBadge.m */; };
+		98B193C01F5D3D05003ADE7A /* BSBadge.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 98B193BF1F5D3D05003ADE7A /* BSBadge.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		986E14E51F2EFA6C00AFA8D1 /* UITabBarController+BSBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBarController+BSBadge.m"; sourceTree = "<group>"; };
 		986E14E61F2EFA6C00AFA8D1 /* UIView+BSBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BSBadge.h"; sourceTree = "<group>"; };
 		986E14E71F2EFA6C00AFA8D1 /* UIView+BSBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSBadge.m"; sourceTree = "<group>"; };
+		98B193BF1F5D3D05003ADE7A /* BSBadge.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BSBadge.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		986E14E11F2EFA6C00AFA8D1 /* BSBadge */ = {
 			isa = PBXGroup;
 			children = (
+				98B193BF1F5D3D05003ADE7A /* BSBadge.podspec */,
 				986E14E21F2EFA6C00AFA8D1 /* BSBadgeView.h */,
 				986E14E31F2EFA6C00AFA8D1 /* BSBadgeView.m */,
 				986E14E41F2EFA6C00AFA8D1 /* UITabBarController+BSBadge.h */,
@@ -134,7 +137,7 @@
 		980A4C901CCA04DF004EA464 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = BeachSon;
 				TargetAttributes = {
 					980A4C971CCA04DF004EA464 = {
@@ -169,6 +172,7 @@
 				980A4CAB1CCA04DF004EA464 /* LaunchScreen.storyboard in Resources */,
 				980A4CA81CCA04DF004EA464 /* Assets.xcassets in Resources */,
 				980A4CA61CCA04DF004EA464 /* Main.storyboard in Resources */,
+				98B193C01F5D3D05003ADE7A /* BSBadge.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,8 +229,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -270,8 +276,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

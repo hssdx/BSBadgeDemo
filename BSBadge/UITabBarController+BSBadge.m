@@ -11,6 +11,8 @@
 
 static const NSInteger kBadgeViewTag = 93728;
 
+@interface _UITabBarController_BADGE : NSObject
+@end
 
 @implementation _UITabBarController_BADGE
 @end
@@ -19,7 +21,7 @@ static const NSInteger kBadgeViewTag = 93728;
 @implementation UITabBarController (BSBadge)
 
 - (UIView *)bs_barItemViewAtIndex:(NSInteger)index {
-    UIView *barItemView = [self.tabBar viewWithTag:kBadgeViewTag];
+    UIView *barItemView = [self.tabBar viewWithTag:kBadgeViewTag + index];
     if (!barItemView) {
         //找到所有的 UITabBarButton
         NSMutableArray<UIView *> *tabBarButtonArray = [NSMutableArray array];
@@ -46,16 +48,16 @@ static const NSInteger kBadgeViewTag = 93728;
 - (void)bs_setBadge:(NSString *)badge remveBadgeBlock:(void(^)(BSBadgeView *))block atIndex:(NSInteger)index {
     UIView *barItemView = [self bs_barItemViewAtIndex:index];
     if (badge == nil) {
-        [barItemView dismissBadge];
+        [barItemView bs_dismissBadge];
     } else {
-        [barItemView setBadgeValue:badge];
-        [barItemView setRemoveBadgeBlock:block];
+        [barItemView bs_setBadgeValue:badge];
+        [barItemView bs_setRemoveBadgeBlock:block];
     }
 }
 
 - (void)bs_removeBadgeAtIndex:(NSInteger)index {
     UIView *barItemView = [self bs_barItemViewAtIndex:index];
-    [barItemView dismissBadge];
+    [barItemView bs_dismissBadge];
 }
 
 @end

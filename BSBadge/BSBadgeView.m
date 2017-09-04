@@ -1,6 +1,6 @@
 //
 //  CustomBadgeView.m
-//  Lighting
+//  BSBadge
 //
 //  Created by Xiongxunquan on 11/27/15.
 //  Copyright © 2015 hssdx. All rights reserved.
@@ -93,6 +93,7 @@
     }
     _badgeLabel = [UILabel new];
     _badgeLabel.text = value;
+    _value = value;
     [self updateBadgeFrame];
 }
 
@@ -146,7 +147,7 @@
     } completion:^(BOOL finished) {
         if (finished) {
             [self removeBadge];
-            [self.superview dismissBadge];
+            [self.superview bs_dismissBadge];
         }
     }];
 }

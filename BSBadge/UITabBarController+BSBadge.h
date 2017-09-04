@@ -10,9 +10,6 @@
 
 @class BSBadgeView;
 
-@interface _UITabBarController_BADGE : NSObject
-@end
-
 @interface UITabBarController (BSBadge)
 
 - (void)bs_setBadge:(NSString *)badge remveBadgeBlock:(void(^)(BSBadgeView *))block atIndex:(NSInteger)index;
